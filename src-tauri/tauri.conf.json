@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "TDEN Compute Worker",
+  "version": "0.1.0",
+  "identifier": "com.tden.compute-worker",
+  "build": {
+    "frontendDist": "../src/dist",
+    "devUrl": "http://localhost:1422",
+    "beforeBuildCommand": "cd src && npm run build",
+    "beforeDevCommand": "cd src && npm run dev"
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis", "deb", "dmg"],
+    "publisher": "TDEN Open Source Community",
+    "copyright": "Copyright © 2026 TDEN",
+    "category": "Utility",
+    "shortDescription": "TDEN compute provider client",
+    "longDescription": "Earn TDEN tokens by providing GPU/CPU/NPU to SIN nodes. Tray-resident worker with allocation limits and idle detection.",
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/icon.ico"]
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "TDEN Compute Worker",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 900,
+        "minHeight": 600
+      }
+    ],
+    "security": { "csp": null }
+  }
+}

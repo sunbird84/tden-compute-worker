@@ -1,0 +1,11 @@
+{
+  "name": "tden-compute-worker",
+  "private": true,
+  "version": "0.1.0",
+  "description": "TDEN compute provider client. Run AI / ZK / batch jobs assigned by SIN nodes; earn platform tokens. Tauri 2 desktop + Rust daemon worker + GPU/CPU autodetect.",
+  "license": "AGPL-3.0",
+  "scripts": {
+    "dev": "cd src && npm run dev",
+    "build": "cd src && npm run build"
+  }
+}

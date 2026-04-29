@@ -1,0 +1,14 @@
+node_modules/
+dist/
+target/
+*.log
+.env
+.DS_Store
+.vscode/
+.idea/
+
+src-tauri/target/
+src-tauri/gen/
+src-tauri/icons/*.png
+src-tauri/icons/*.ico
+src-tauri/icons/*.icns
