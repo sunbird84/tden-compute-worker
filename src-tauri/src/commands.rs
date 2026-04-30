@@ -48,8 +48,9 @@ pub async fn scan_hardware() -> Result<HardwareInfo, String> {
         .unwrap_or_else(|| "unknown".to_string());
 
     let cpu_threads = sys.cpus().len();
-    // Phase A: physical_core_count is conservative; sysinfo 0.30 returns Option
-    let cpu_cores = sysinfo::System::physical_core_count().unwrap_or(cpu_threads);
+    // Phase A: sysinfo 0.30+ has physical_core_count() on the instance.
+    // Phase A: sysinfo 0.30+ exposes physical_core_count() on the System instance.
+    let cpu_cores = sys.physical_core_count().unwrap_or(cpu_threads);
 
     let ram_gb = (sys.total_memory() / 1_073_741_824) as u32;
 
